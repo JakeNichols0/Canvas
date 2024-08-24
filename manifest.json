@@ -1,0 +1,11 @@
+{
+    "name": "Better Canvas Home Page",
+    "Version": "1.0.0",
+    "description": "Makes the boring home pages for your class look cool",
+    "manifest_version": 1,
+    "author": "Jake Nichols",
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "Better Canvas Home Page"
+    }
+}
