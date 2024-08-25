@@ -1,11 +1,18 @@
 {
     "name": "Better Canvas Home Page",
-    "Version": "1.0.0",
+    "version": "1.0.0",
     "description": "Makes the boring home pages for your class look cool",
-    "manifest_version": 1,
+    "manifest_version": 3,
     "author": "Jake Nichols",
-    "action":{
+    "permissions": ["storage","activeTab","declarativeContent"],
+    "action": {
         "default_popup": "index.html",
         "default_title": "Better Canvas Home Page"
-    }
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://*.instructure.com/courses/*"],
+            "js": ["content.js"]
+        }
+    ]
 }
