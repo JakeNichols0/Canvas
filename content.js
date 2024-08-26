@@ -1,7 +1,7 @@
 let cont = document.getElementById("course_home_content");
 let html = `
 <div style="width: 100%;height: 25vh;background-image: url('https://hls.harvard.edu/wp-content/uploads/2022/05/CONSTITUTION_iStock-923052552_2500.jpg');background-repeat: no-repeat;background-size: cover;">
-    <h1 style="text-align: center;font-weight: bolder;font-size: 50px;color: red;padding-top: 10vh;padding-bottom: 10vh;box-sizing: border-box;background-color: #00000090;height: 25vh;">AP Computer Science</h1>
+    <h1 style="text-align: center;font-weight: bolder;font-size: 50px;color: beige;padding-top: 10vh;padding-bottom: 10vh;box-sizing: border-box;background-color: #00000090;height: 25vh;">AP Computer Science</h1>
 </div>
 <table style="width: 100%;margin-top: 50px;">
   <tbody>
