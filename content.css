@@ -18,3 +18,7 @@ div.navigationDivBackground {
     width: 100%;
     height: 500px;
 }
+
+div.navigationDivBackground:hover {
+    transform: scale(1.05);
+}
