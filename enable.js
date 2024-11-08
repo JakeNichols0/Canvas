@@ -40,11 +40,16 @@ function dy(dx) {
     for(let i=0; i<the; i++) {
         the[i].selected = false;
     }
-    let lim = document.getElementById(dx);
-    lim.selected = true;
+    th.value = dx;
 }
 
-chrome.storage.sync.get('theme', function(data) {
-    console.log(data.theme)
+chrome.storage.sync.get(['theme']).then((data) => {
+    console.log("seven " + data.theme)
     dy(data.theme);
 });
+
+th.addEventListener("change", function() {
+    chrome.storage.sync.set({theme: th.value}, function() {
+        console.log("Theme is " + th.value);
+    })
+})
