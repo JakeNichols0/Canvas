@@ -2,11 +2,9 @@ h1.classNameH1 {
     text-align: center;
     font-weight: bolder;
     font-size: 50px;
-    color: beige;
     padding-top: 10vh;
     padding-bottom: 10vh;
     box-sizing: border-box;
-    background-color: #00000090;
     height: 25vh;
 }
 
