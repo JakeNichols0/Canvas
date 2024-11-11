@@ -66,3 +66,7 @@ async function theme(imgNum) {
   console.log("<><><><><><><><><><><>" + images.get(th));
   return images.get(th)[imgNum];
 }
+
+chrome.storage.onChanged.addListener((changes, namespace) => {
+  window.location.reload();
+});
