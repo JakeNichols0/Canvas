@@ -2,7 +2,7 @@ let cont = document.getElementById("course_home_content");
 let className = document.getElementsByClassName("ic-Action-header")[0].textContent;
 async function haitch() {
   let html = `
-  <div style="width: 100%;height: 25vh;background-image: url('${await theme(0)}');background-repeat: no-repeat;background-size: cover;">
+  <div class="giveHead" style="background-image: url('${await theme(0)}');">
       <h1 class="classNameH1" style="background-color: #${await theme(3)}; color: ${await theme(4)};">${className}</h1>
   </div>
   <table style="width: 100%;margin-top: 50px;">
@@ -49,7 +49,7 @@ async function theme(imgNum) {
   ]);
   images.set("b",["https://www.pixelstalk.net/wp-content/uploads/2016/07/French-Flag-HD-Wallpaper.jpg",
     "https://www.thespruceeats.com/thmb/HWcoI5bWLjYryC8g44J_imlX3-0=/2100x1428/filters:fill(auto,1)/GettyImages-636741221-e5442b2f0b3a4d33a26ebf7deb237fed.jpg",
-    "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.pexels.com%2Fphotos%2F587842%2Fpexels-photo-587842.jpeg%3Fcs%3Dsrgb%26dl%3Deiffel-tower-france-paris-summer-587842.jpg%26fm%3Djpg&f=1&nofb=1&ipt=ede2dce5e4b00fcbc58a279a30fea89f0d61d57bae63415262a54fdbf272bb6d&ipo=images",
+    "https://images.pexels.com/photos/587842/pexels-photo-587842.jpeg?cs=srgb&dl=eiffel-tower-france-paris-summer-587842.jpg&fm=jpg",
     "00000080", //Bg color
     "#5ea1ff" //text color
   ]);
