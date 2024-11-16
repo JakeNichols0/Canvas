@@ -1,5 +1,8 @@
 let cont = document.getElementById("course_home_content");
-let className = document.getElementsByClassName("ic-Action-header")[0].textContent;
+let url = window.location.href;
+let courseNumber = url.substring(url.length-6);
+let className = document.getElementById("crumb_course_" + courseNumber).textContent;
+
 async function haitch() {
   let html = `
   <div class="giveHead" style="background-image: url('${await theme(0)}');">
@@ -9,13 +12,13 @@ async function haitch() {
     <tbody>
       <tr>
         <td style="width: 50%;">
-          <a href="${window.location.href}/modules">
+          <a href="${url}/modules">
             <div class="navigationDivBackground" style="background-image: url('${await theme(1)}');"></div>
             <h2 style="text-align: center;">Modules</h2>
           </a>
         </td>
         <td style="width: 50%;">
-          <a href="${window.location.href}/syllabus">
+          <a href="${url}/syllabus">
             <div class="navigationDivBackground" style="background-image: url('${await theme(2)}');"></div>
             <h2 style="text-align: center;">Syllabus</h2>
           </a>
