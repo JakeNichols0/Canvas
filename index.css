@@ -1,0 +1,26 @@
+html {
+    width: 150px;
+    background-image: linear-gradient(45deg, #F44336, #E91E63);
+}
+h1 {
+    font-family: "sabbath-black";
+}
+button, select {
+    border-radius: 5px;
+    border-style: outset;
+    border-width: 2.5px;
+    border-color: #6980ff;
+    background-color: #6980ff;
+    font-family: "playwrite-cc-za", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+button:disabled, select:focus {
+    background-color: #99a8ff;
+    border-color: #99a8ff;
+    border-style: inset;
+}
+button:hover, select:hover {
+    background-color: #3f4fa6;
+    border-color: #3f4fa6;
+}
