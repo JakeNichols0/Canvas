@@ -13,7 +13,7 @@
         {
             "matches": ["https://*.instructure.com/courses/*"],
             "js": ["content.js"],
-            "css": ["content.css"]
+            "css": ["CSS/content.css"]
         }
     ]
 }

@@ -53,3 +53,8 @@ th.addEventListener("change", function() {
         console.log("Theme is " + th.value);
     })
 })
+
+//Open
+document.getElementById('op').addEventListener('click', () => {
+    window.open("options.html");
+});

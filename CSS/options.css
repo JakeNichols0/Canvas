@@ -1,0 +1,53 @@
+html {
+    background-color: #000000;
+}
+h1, h2 {
+    font-family: "sabbath-black";
+    text-align: center;
+}
+.scheiße {
+    background: linear-gradient(45deg, #F44336, #E91E63);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.putain {
+    display: flex;
+    flex-wrap: wrap;
+}
+.putain div {
+    background: linear-gradient(45deg, #F44336, #E91E63);
+    flex: auto;
+    margin: 0px 10px;
+    border-radius: 10px;
+    padding: 10px;
+}
+div.slide {
+    background: none;
+}
+div.slide input {
+    width: 100%;
+}
+p.lay {
+    float: left;
+    width: 50%;
+}
+button, select {
+    border-radius: 5px;
+    border-style: outset;
+    border-width: 2.5px;
+    border-color: #6980ff;
+    background-color: #6980ff;
+    font-family: "playwrite-cc-za", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+button:disabled, select:focus {
+    background-color: #99a8ff;
+    border-color: #99a8ff;
+    border-style: inset;
+}
+button:hover, select:hover {
+    background-color: #3f4fa6;
+    border-color: #3f4fa6;
+}
