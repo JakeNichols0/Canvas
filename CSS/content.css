@@ -28,4 +28,16 @@ div.giveHead {
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 25px;
+    animation-name: jorkingIt;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+
+@keyframes jorkingIt {
+    0% {rotate: 0deg;}
+    25% {rotate: 90deg;}
+    50% {rotate: 180deg;}
+    75% {rotate: 270deg;}
+    100% {rotate: 360deg;}
 }
