@@ -4,7 +4,7 @@ let courseNumber = url.substring(url.length-6);
 let className = document.getElementById("crumb_course_" + courseNumber).textContent;
 
 async function haitch() {
-  let html = `
+  return `
   <div class="giveHead" style="background-image: url('${await theme(0)}');">
       <h1 class="classNameH1" style="background-color: #${await theme(3)}; color: ${await theme(4)};">${className}</h1>
   </div>
@@ -25,8 +25,7 @@ async function haitch() {
         </td>
       </tr>
     </tbody>
-  </table>`
-  return html;
+  </table>`;
 }
 
 window.onload = function() {
