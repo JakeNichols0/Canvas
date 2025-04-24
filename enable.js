@@ -58,3 +58,12 @@ th.addEventListener("change", function() {
 document.getElementById('op').addEventListener('click', () => {
     window.open("options.html");
 });
+
+//Spin
+document.getElementById("sp").addEventListener('click', () => {
+    chrome.storage.sync.get(['spin']).then((data) => {
+        chrome.storage.sync.set({spin: !data.spin}, () => {
+            console.log("Spin is " + !data.spin);
+        });
+    });
+})

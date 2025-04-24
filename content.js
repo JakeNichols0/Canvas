@@ -5,7 +5,7 @@ let className = document.getElementById("crumb_course_" + courseNumber).textCont
 
 async function haitch() {
   return `
-  <div class="giveHead" style="background-image: url('${await theme(0)}');">
+  <div class="giveHead" id="head" style="background-image: url('${await theme(0)}');">
       <h1 class="classNameH1" style="background-color: #${await theme(3)}; color: ${await theme(4)};">${className}</h1>
   </div>
   <table style="width: 100%;margin-top: 50px;">
@@ -32,11 +32,13 @@ window.onload = function() {
   chrome.storage.sync.get('on', function(data) {
       if (data.on) {
         haitch().then((html) => {
-        if (cont.children[0].id == 'wiki_page_show') {
-          cont.children[0].firstElementChild.insertAdjacentHTML("afterend", html);
-        } else {
-          cont.lastElementChild.insertAdjacentHTML("afterend", html);
-        }});
+          if (cont.children[0].id == 'wiki_page_show') {
+            cont.children[0].firstElementChild.insertAdjacentHTML("afterend", html);
+          } else {
+            cont.lastElementChild.insertAdjacentHTML("afterend", html);
+          }
+          enableSpining();
+        });
       }
   });
 }
@@ -62,13 +64,27 @@ async function theme(imgNum) {
     "#047283" //text color
   ]);
   let th = "a";
-  await chrome.storage.sync.get('theme').then((data) => {
+  await chrome.storage.sync.get(['theme']).then((data) => {
     th = data.theme;
   });
   console.log("<><><><><><><><><><><>" + images.get(th));
   return images.get(th)[imgNum];
 }
 
+function enableSpining() {
+  chrome.storage.sync.get(['spin']).then((data) => {
+    if(data.spin) {
+      document.getElementById('head').style.animation = "jorkingIt 10s ease 0s infinite normal";
+    } else {
+      document.getElementById('head').style.animation = "none";
+    }
+  });
+}
+
 chrome.storage.onChanged.addListener((changes, namespace) => {
-  window.location.reload();
+  if(Object.hasOwn(changes, 'spin')) {
+    enableSpining();
+  } else {
+    window.location.reload();
+  }
 });
