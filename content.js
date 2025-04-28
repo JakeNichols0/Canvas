@@ -35,7 +35,7 @@ window.onload = function() {
           if (cont.children[0].id == 'wiki_page_show') {
             cont.children[0].firstElementChild.insertAdjacentHTML("afterend", html);
           } else {
-            cont.lastElementChild.insertAdjacentHTML("afterend", html);
+            cont.firstElementChild.insertAdjacentHTML("afterend", html);
           }
           enableSpining();
         });
